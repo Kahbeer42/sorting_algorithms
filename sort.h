@@ -1,43 +1,7 @@
-kip to content
-bdbaraban
-/
-holbertonschool-low_level_programming
-Public
-Code
-Issues
-2
-Pull requests
-4
-Actions
-Projects
-Security
-Insights
-Beta Try the new code view
-holbertonschool-low_level_programming/0x1A-sorting_algorithms/sort.h
-@234761
-234761 Move bitonic comparison sort macros to header file
- 1 contributor
-54 lines (47 sloc)  1.25 KB
-#ifndef SORT_H
-#define SORT_H
-
+#ifndef _SORT_H_
+#define _SORT_H_
 #include <stdio.h>
-#include <stdlib.h>
-
-/* Comparison direction macros for bitonic sort */
-#define UP 0
-#define DOWN 1
-
-/**
- * enum bool - Enumeration of Boolean values.
- * @false: Equals 0.
- * @true: Equals 1.
- */
-typedef enum bool
-{
-	false = 0,
-	true
-} bool;
+#include <stddef.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -53,11 +17,8 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-/* Printing helper functions */
-void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-
-/* Sorting algoritms */
+void print_array(const int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
@@ -71,4 +32,4 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
-#endif
+#endif /* sort.h */
